@@ -8,7 +8,9 @@ class Vector:
 		self.x = float(input("x" + num + ": "))
 		self.y = float(input("y" + num + ": "))
 		self.z = float(input("z" + num + ": "))
-		return self
 
 	def __str__(self):
 		return "<" + str(self.x) + ", " + str(self.y) + ", " + str(self.z) + ">"
+
+if __name__ == "__main__":
+	print("This is the class for vectors. No scripts are run here.")

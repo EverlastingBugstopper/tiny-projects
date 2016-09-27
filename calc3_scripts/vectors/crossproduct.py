@@ -43,7 +43,7 @@ def cross_product(vectors):
 		print()
 	row_break(width)
 
-	print("((%(j1)d * %(k2)d) - (%(j2)d * %(k1)d)) - ((%(i1)d * %(k2)d) - (%(i2)d * %(k1)d)) + ((%(i1)d * %(j2)d) - (%(i2)d * %(j1)d)) = " % \
+	print("((%(j1)d * %(k2)d) - (%(j2)d * %(k1)d))i - ((%(i1)d * %(k2)d) - (%(i2)d * %(k1)d))j + ((%(i1)d * %(j2)d) - (%(i2)d * %(j1)d)k) = " % \
 		{"i1": vector1.x, "i2": vector2.x, \
 		 "j1": vector1.y, "j2": vector2.y, \
 		 "k1": vector1.z, "k2": vector2.z})
@@ -55,7 +55,7 @@ def cross_product(vectors):
 	k1 = vector1.x * vector2.y
 	k2 = vector2.x * vector1.y
 
-	print("(%(i1)d - %(i2)d) - (%(j1)d - %(j2)d) + (%(k1)d - %(k2)d) = " % \
+	print("(%(i1)d - %(i2)d)i - (%(j1)d - %(j2)d)j + (%(k1)d - %(k2)d)k = " % \
 		{"i1": i1, "i2": i2, \
 		 "j1": j1, "j2": j2, \
 		 "k1": k1, "k2": k2})
@@ -64,10 +64,11 @@ def cross_product(vectors):
 	j0 = j1 - j2
 	k0 = k1 - k2
 
-	print("%(i0)d - %(j0)d + %(k0)d = " % \
+	print("%(i0)di - %(j0)dj + %(k0)dk" % \
 		  {"i0": i0, "j0": j0, "k0": k0})
 
-	print(i0 - j0 + k0)
+	print("<%(i0)d, %(j0)d, %(k0)d>" % \
+		  {"i0": i0, "j0": -j0, "k0": k0})
 
 def right_padding(string, padding):
 	print('{{0: >{}}}'.format(int(padding)).format(str(string)), end="")

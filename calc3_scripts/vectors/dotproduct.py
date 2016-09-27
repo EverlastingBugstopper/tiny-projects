@@ -13,12 +13,12 @@ def get_input():
 def dot_product(vectors):
 	vector1 = vectors[0]
 	vector2 = vectors[1]
-	print("(x1 - x2) + (y1 - y2) + (z1 - z2) = ")
-	print("(%(x1)d - %(x2)d) + (%(y1)d - %(y2)d) + (%(z1)d - %(z2)d) = " % \
+	print("(x1 * x2) + (y1 * y2) + (z1 * z2) = ")
+	print("(%(x1)d * %(x2)d) + (%(y1)d * %(y2)d) + (%(z1)d * %(z2)d) = " % \
 		{"x1": vector1.x, "x2": vector2.x, "y1": vector1.y, "y2": vector2.y, "z1": vector1.z, "z2": vector2.z})
-	x = vector1.x - vector2.x
-	y = vector1.y - vector2.y
-	z = vector1.z - vector2.z
+	x = vector1.x * vector2.x
+	y = vector1.y * vector2.y
+	z = vector1.z * vector2.z
 	print("(%(x0)d) + (%(y0)d) + (%(z0)d) = " % \
 		{"x0": x, "y0": y, "z0": z})
 	product = x + y + z
